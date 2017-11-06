@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/HW1.dir/reference_main.cpp.o CMakeFiles/HW1.dir/reference_calc.cpp.o CMakeFiles/HW1.dir/HW1.cpp.o CMakeFiles/HW1.dir/HW1_generated_student_func.cu.o  -o HW1 -rdynamic /usr/local/cuda/lib64/libcudart.so -Wl,-rpath,/usr/local/cuda/lib64 

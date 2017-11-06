@@ -1,0 +1,108 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+APPS	chapter01/Makefile	/^APPS=hello$/;"	m
+BITS_PER_BYTE	chapter10/crypt.c	17;"	d	file:
+CHECK	chapter09/simpleP2P.c	16;"	d	file:
+CHECK	chapter09/simpleP2P_CUDA_Aware.c	16;"	d	file:
+CHECK	common/common.h	6;"	d
+CHECK_CUBLAS	common/common.h	17;"	d
+CHECK_CUFFT	common/common.h	39;"	d
+CHECK_CURAND	common/common.h	28;"	d
+CHECK_CUSPARSE	common/common.h	50;"	d
+CHUNK_SIZE	chapter10/crypt.c	12;"	d	file:
+CHUNK_SIZE	chapter10/generate_data.c	9;"	d	file:
+CU_APPS	chapter02/Makefile	/^CU_APPS=checkDeviceInfor checkThreadIndex sumArraysOnGPU-timer \\$/;"	m
+CU_APPS	chapter03/Makefile	/^CU_APPS=nestedHelloWorld nestedReduce nestedReduce2 nestedReduceNosync \\$/;"	m
+CU_APPS	chapter04/Makefile	/^CU_APPS=globalVariable memTransfer pinMemTransfer readSegment \\$/;"	m
+CU_APPS	chapter05/Makefile	/^CU_APPS=checkSmemRectangle checkSmemSquare constantReadOnly constantStencil \\$/;"	m
+CU_APPS	chapter06/Makefile	/^CU_APPS=asyncAPI simpleCallback simpleHyperqBreadth simpleHyperqDependence \\$/;"	m
+CU_APPS	chapter07/Makefile	/^CU_APPS=atomic-ordering floating-point-accuracy floating-point-perf fmad \\$/;"	m
+CU_APPS	chapter08/Makefile	/^CU_APPS=cublas cuda-openacc cufft-multi cufft cusparse rand-kernel \\$/;"	m
+CU_APPS	chapter09/Makefile	/^CU_APPS=simple2DFD simpleMultiGPU simpleP2P_PingPong$/;"	m
+CU_APPS	chapter10/Makefile	/^CU_APPS=crypt.config crypt.constant crypt.flexible crypt.legacy crypt.openmp \\$/;"	m
+C_APPS	chapter02/Makefile	/^C_APPS=sumArraysOnHost$/;"	m
+C_APPS	chapter03/Makefile	/^C_APPS=$/;"	m
+C_APPS	chapter04/Makefile	/^C_APPS=$/;"	m
+C_APPS	chapter05/Makefile	/^C_APPS=$/;"	m
+C_APPS	chapter06/Makefile	/^C_APPS=$/;"	m
+C_APPS	chapter07/Makefile	/^C_APPS=$/;"	m
+C_APPS	chapter08/Makefile	/^C_APPS=simple-data simple-kernels simple-parallel$/;"	m
+C_APPS	chapter09/Makefile	/^C_APPS=simpleC2C simpleP2P simpleP2P_CUDA_Aware$/;"	m
+C_APPS	chapter10/Makefile	/^C_APPS=crypt generate_data generate_userkey$/;"	m
+DECRYPT	chapter10/crypt.c	/^typedef enum { ENCRYPT, DECRYPT } action;$/;"	e	enum:__anon1	file:
+ENCRYPT	chapter10/crypt.c	/^typedef enum { ENCRYPT, DECRYPT } action;$/;"	e	enum:__anon1	file:
+FIELD_WIDTH	chapter09/simpleP2P_CUDA_Aware.c	32;"	d	file:
+FLOAT_PRECISION	chapter09/simpleP2P_CUDA_Aware.c	33;"	d	file:
+KEY_LENGTH	chapter10/crypt.c	14;"	d	file:
+LARGE_MESSAGE_SIZE	chapter09/simpleP2P.c	33;"	d	file:
+LOOP_LARGE	chapter09/simpleC2C.c	17;"	d	file:
+LOOP_LARGE	chapter09/simpleP2P.c	31;"	d	file:
+LOOP_LARGE	chapter09/simpleP2P_CUDA_Aware.c	31;"	d	file:
+M	chapter08/drop-in.c	/^int M = 1024;$/;"	v
+MAX_MSG_SIZE	chapter09/simpleC2C.c	15;"	d	file:
+MAX_MSG_SIZE	chapter09/simpleP2P.c	28;"	d	file:
+MAX_MSG_SIZE	chapter09/simpleP2P_CUDA_Aware.c	28;"	d	file:
+MESSAGE_ALIGNMENT	chapter09/simpleC2C.c	14;"	d	file:
+MESSAGE_ALIGNMENT	chapter09/simpleP2P.c	27;"	d	file:
+MESSAGE_ALIGNMENT	chapter09/simpleP2P_CUDA_Aware.c	27;"	d	file:
+MYBUFSIZE	chapter09/simpleC2C.c	16;"	d	file:
+MYBUFSIZE	chapter09/simpleP2P.c	29;"	d	file:
+MYBUFSIZE	chapter09/simpleP2P_CUDA_Aware.c	29;"	d	file:
+N	chapter08/drop-in.c	/^int N = 1024;$/;"	v
+N	chapter08/simple-data.c	11;"	d	file:
+N	chapter08/simple-kernels.c	12;"	d	file:
+N	chapter08/simple-parallel.c	11;"	d	file:
+SECRET_KEY_LENGTH	chapter10/generate_userkey.c	8;"	d	file:
+SKIP_LARGE	chapter09/simpleP2P.c	32;"	d	file:
+SetDeviceBeforeInit	chapter09/simpleP2P_CUDA_Aware.c	/^void SetDeviceBeforeInit()$/;"	f
+USERKEY_LENGTH	chapter10/crypt.c	16;"	d	file:
+_COMMON_H	common/common.h	4;"	d
+_encryptChunk	chapter10/crypt.c	/^typedef struct _encryptChunk$/;"	s	file:
+action	chapter10/crypt.c	/^typedef enum { ENCRYPT, DECRYPT } action;$/;"	t	typeref:enum:__anon1	file:
+arch	chapter08/Makefile	/^	nvcc -O2 -arch=sm_20 -lcublas -lcurand -o cuda-openacc cuda-openacc.cu$/;"	m
+arch	chapter08/Makefile	/^	nvcc -O2 -arch=sm_20 -lcublas -o cublas cublas.cu$/;"	m
+arch	chapter08/Makefile	/^	nvcc -O2 -arch=sm_20 -lcufft -o cufft cufft.cu$/;"	m
+arch	chapter08/Makefile	/^	nvcc -O2 -arch=sm_20 -lcufft -o cufft-multi cufft-multi.cu$/;"	m
+arch	chapter08/Makefile	/^	nvcc -O2 -arch=sm_20 -lcurand -o rand-kernel rand-kernel.cu$/;"	m
+arch	chapter08/Makefile	/^	nvcc -O2 -arch=sm_20 -lcurand -o replace-rand replace-rand.cu$/;"	m
+arch	chapter08/Makefile	/^	nvcc -O2 -arch=sm_20 -lcurand -o replace-rand-streams replace-rand-streams.cu$/;"	m
+arch	chapter08/Makefile	/^	nvcc -O2 -arch=sm_20 -lcusparse -o cusparse cusparse.cu$/;"	m
+arch	chapter10/Makefile	/^	nvcc -O2 -arch=sm_20 -L${CUDA_HOME}\/lib64 -lnvToolsExt -o sumMatrixGPU_nvToolsExt sumMatrixGPU_nvToolsExt.cu$/;"	m
+arch	chapter10/Makefile	/^	nvcc -Xcompiler -fopenmp -O2 -arch=sm_20 -o crypt.openmp crypt.openmp.cu -lgomp$/;"	m
+chunk	chapter10/generate_data.c	/^signed char chunk[CHUNK_SIZE];$/;"	v
+cleanup	chapter10/crypt.c	/^void cleanup(encryptChunk *textList, encryptChunk *cryptList, int *key,$/;"	f
+cleanupList	chapter10/crypt.c	/^void cleanupList(encryptChunk *l)$/;"	f
+data	chapter10/crypt.c	/^    signed char *data;$/;"	m	struct:_encryptChunk	file:
+encryptChunk	chapter10/crypt.c	/^} encryptChunk;$/;"	t	typeref:struct:_encryptChunk	file:
+encrypt_decrypt	chapter10/crypt.c	/^static void encrypt_decrypt(encryptChunk *plainList, encryptChunk *cryptList,$/;"	f	file:
+generateDecryptKey	chapter10/crypt.c	/^static int *generateDecryptKey(int16_t *userkey)$/;"	f	file:
+generateEncryptKey	chapter10/crypt.c	/^static int *generateEncryptKey(int16_t *userkey)$/;"	f	file:
+generate_random_dense_matrix	chapter08/drop-in.c	/^void generate_random_dense_matrix(int M, int N, float **outA)$/;"	f
+getFileLength	chapter10/crypt.c	/^static size_t getFileLength(FILE *fp)$/;"	f	file:
+initalData	chapter09/simpleC2C.c	/^void initalData (void * sbuf, void * rbuf, size_t size)$/;"	f
+initalData	chapter09/simpleP2P.c	/^void initalData (void * sbuf, void * rbuf, size_t size)$/;"	f
+initialData	chapter02/sumArraysOnHost.c	/^void initialData(float *ip, int size)$/;"	f
+inv	chapter10/crypt.c	/^static int inv(int x)$/;"	f	file:
+loop	chapter09/simpleP2P.c	/^int loop = LOOP_LARGE;$/;"	v
+main	chapter02/sumArraysOnHost.c	/^int main(int argc, char **argv)$/;"	f
+main	chapter08/drop-in.c	/^int main(int argc, char **argv)$/;"	f
+main	chapter08/simple-data.c	/^int main(int argc, char **argv)$/;"	f
+main	chapter08/simple-kernels.c	/^int main(int argc, char **argv)$/;"	f
+main	chapter08/simple-parallel.c	/^int main(int argc, char **argv)$/;"	f
+main	chapter09/simpleC2C.c	/^int main (int argc, char *argv[])$/;"	f
+main	chapter09/simpleP2P.c	/^int main (int argc, char *argv[])$/;"	f
+main	chapter09/simpleP2P_CUDA_Aware.c	/^int main (int argc, char *argv[])$/;"	f
+main	chapter10/crypt.c	/^int main(int argc, char **argv)$/;"	f
+main	chapter10/generate_data.c	/^int main(int argc, char **argv)$/;"	f
+main	chapter10/generate_userkey.c	/^int main(int argc, char **argv)$/;"	f
+next	chapter10/crypt.c	/^    struct _encryptChunk *next;$/;"	m	struct:_encryptChunk	typeref:struct:_encryptChunk::_encryptChunk	file:
+readInputData	chapter10/crypt.c	/^void readInputData(FILE *in, size_t textLen, encryptChunk **textHeadOut,$/;"	f
+seconds	common/common.h	/^inline double seconds()$/;"	f
+std	chapter09/Makefile	/^	gcc -O2 -std=c99 -I${MPI_HOME}\/include -I${CUDA_HOME}\/include -L${MPI_HOME}\/lib -L${CUDA_HOME}\/lib64 -lcudart -lmpi -o simpleP2P simpleP2P.c$/;"	m
+std	chapter09/Makefile	/^	gcc -O2 -std=c99 -I${MPI_HOME}\/include -I${CUDA_HOME}\/include -L${MPI_HOME}\/lib -L${CUDA_HOME}\/lib64 -lcudart -lmpi -o simpleP2P_CUDA_Aware simpleP2P_CUDA_Aware.c$/;"	m
+std	chapter09/Makefile	/^	gcc -O2 -std=c99 -I${MPI_HOME}\/include -L${MPI_HOME}\/lib -lmpi -o simpleC2C simpleC2C.c$/;"	m
+sumArraysOnHost	chapter02/sumArraysOnHost.c	/^void sumArraysOnHost(float *A, float *B, float *C, const int N)$/;"	f

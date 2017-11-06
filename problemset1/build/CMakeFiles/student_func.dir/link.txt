@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/student_func.dir/student_func_generated_student_func.cu.o  -o student_func -rdynamic /usr/local/cuda/lib64/libcudart.so -Wl,-rpath,/usr/local/cuda/lib64 

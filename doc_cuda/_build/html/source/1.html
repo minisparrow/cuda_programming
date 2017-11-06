@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CUDA Program Structure &mdash; cuda 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="cuda 1.0 documentation" href="../index.html"/>
+        <link rel="next" title="CUDA Programming Model" href="2.html"/>
+        <link rel="prev" title="Welcome to CUDA Programming documentation!" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> cuda
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CUDA Program Structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#first-cuda-programming">First CUDA Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cuda-development-environment">CUDA Development Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-thread-index">Add thread index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#output">output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2.html">CUDA Programming Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.html">CUDA Execution Model</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">cuda</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>CUDA Program Structure</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/1.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cuda-program-structure">
+<h1>CUDA Program Structure<a class="headerlink" href="#cuda-program-structure" title="Permalink to this headline">¶</a></h1>
+<p>A typical CUDA program structure consists of five main steps:</p>
+<ol class="arabic simple">
+<li>Allocate GPU memories.</li>
+<li>Copy data from CPU memory to GPU memory.</li>
+<li>Invoke the CUDA kernel to perform program-specific computation.</li>
+<li>Copy data back from GPU memory to CPU memory.</li>
+<li>Destroy GPU memories.</li>
+</ol>
+<div class="section" id="first-cuda-programming">
+<h2>First CUDA Programming<a class="headerlink" href="#first-cuda-programming" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#include &lt;stdio.h&gt;</span>
+
+<span class="n">__global__</span> <span class="n">void</span> <span class="n">helloFromGPU</span><span class="p">(</span><span class="n">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;hello world from GPU!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nb">int</span> <span class="n">main</span><span class="p">(</span><span class="nb">int</span> <span class="n">argc</span><span class="p">,</span> <span class="n">char</span> <span class="n">const</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;hello world from cpu</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+
+    <span class="n">helloFromGPU</span><span class="o">&lt;&lt;&lt;</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="o">&gt;&gt;&gt;</span><span class="p">();</span>
+    <span class="n">cudaDeviceReset</span><span class="p">();</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>compile</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">nvcc</span> <span class="n">helloworld</span><span class="o">.</span><span class="n">cu</span> <span class="o">-</span><span class="n">o</span> <span class="n">helloworld</span>
+</pre></div>
+</div>
+<p>output</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>hello world from cpu
+hello world from GPU!
+hello world from GPU!
+hello world from GPU!
+hello world from GPU!
+hello world from GPU!
+hello world from GPU!
+hello world from GPU!
+hello world from GPU!
+hello world from GPU!
+hello world from GPU!
+</pre></div>
+</div>
+</div>
+<div class="section" id="cuda-development-environment">
+<h2>CUDA Development Environment<a class="headerlink" href="#cuda-development-environment" title="Permalink to this headline">¶</a></h2>
+<p>NVIDIA provides a comprehensive development environment for C and C++ developers to build GPU-accelerated applications, including:</p>
+<p>➤ NVIDIA Nsight™ integrated development environment</p>
+<p>➤ CUDA-GDB command line debugger</p>
+<p>➤ Visual and command line profiler for performance analysis</p>
+<p>➤ CUDA-MEMCHECK memory analyzer</p>
+<p>➤ GPU device management tools</p>
+<p>After you become familiar with these tools, programming with CUDA C is</p>
+<p>straightforward and rewarding</p>
+</div>
+<div class="section" id="add-thread-index">
+<h2>Add thread index<a class="headerlink" href="#add-thread-index" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#include &lt;stdio.h&gt;</span>
+
+<span class="n">__global__</span> <span class="n">void</span> <span class="n">helloFromGPU</span><span class="p">(</span><span class="n">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;hello world from GPU thread </span><span class="si">%d</span><span class="s2">!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">threadIdx</span><span class="o">.</span><span class="n">x</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nb">int</span> <span class="n">main</span><span class="p">(</span><span class="nb">int</span> <span class="n">argc</span><span class="p">,</span> <span class="n">char</span> <span class="n">const</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;hello world from cpu</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+
+    <span class="n">helloFromGPU</span><span class="o">&lt;&lt;&lt;</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="o">&gt;&gt;&gt;</span><span class="p">();</span>
+    <span class="o">//</span><span class="n">cudaDeviceReset</span><span class="p">();</span>
+    <span class="n">cudaDeviceSynchronize</span><span class="p">();</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="output">
+<h2>output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span>hello world from cpu
+hello world from GPU thread 0!
+hello world from GPU thread 1!
+hello world from GPU thread 2!
+hello world from GPU thread 3!
+hello world from GPU thread 4!
+hello world from GPU thread 5!
+hello world from GPU thread 6!
+hello world from GPU thread 7!
+hello world from GPU thread 8!
+hello world from GPU thread 9!
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="2.html" class="btn btn-neutral float-right" title="CUDA Programming Model" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral" title="Welcome to CUDA Programming documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, lijun.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

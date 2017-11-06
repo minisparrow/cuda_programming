@@ -1,0 +1,121 @@
+CUDA Program Structure
+=======================
+
+A typical CUDA program structure consists of five main steps:
+
+1. Allocate GPU memories.
+
+2. Copy data from CPU memory to GPU memory.
+
+3. Invoke the CUDA kernel to perform program-specific computation.
+
+4. Copy data back from GPU memory to CPU memory.
+
+5. Destroy GPU memories.
+
+First CUDA Programming
+----------------------
+
+::
+
+ #include <stdio.h>
+ 
+ __global__ void helloFromGPU(void)
+ {
+     printf("hello world from GPU!\n");
+ }
+ 
+ int main(int argc, char const *argv[])
+ {
+ 
+     printf("hello world from cpu\n");
+ 
+     helloFromGPU<<<1,10>>>();
+     cudaDeviceReset();
+     return 0;
+ }
+
+compile
+
+::
+
+ nvcc helloworld.cu -o helloworld
+
+output
+
+::
+
+ hello world from cpu
+ hello world from GPU!
+ hello world from GPU!
+ hello world from GPU!
+ hello world from GPU!
+ hello world from GPU!
+ hello world from GPU!
+ hello world from GPU!
+ hello world from GPU!
+ hello world from GPU!
+ hello world from GPU!
+
+
+
+CUDA Development Environment
+-----------------------------
+
+NVIDIA provides a comprehensive development environment for C and C++ developers to build GPU-accelerated applications, including:
+
+➤ NVIDIA Nsight™ integrated development environment
+
+➤ CUDA-GDB command line debugger
+
+➤ Visual and command line profiler for performance analysis
+
+➤ CUDA-MEMCHECK memory analyzer
+
+➤ GPU device management tools
+
+After you become familiar with these tools, programming with CUDA C is
+
+straightforward and rewarding
+
+
+
+Add thread index 
+----------------
+::
+
+ #include <stdio.h>
+ 
+ __global__ void helloFromGPU(void)
+ {
+     printf("hello world from GPU thread %d!\n",threadIdx.x);
+ }
+ 
+ int main(int argc, char const *argv[])
+ {
+ 
+     printf("hello world from cpu\n");
+ 
+     helloFromGPU<<<1,10>>>();
+     //cudaDeviceReset();
+     cudaDeviceSynchronize();
+     return 0;
+ }
+ 
+output 
+--------
+
+::
+
+ hello world from cpu
+ hello world from GPU thread 0!
+ hello world from GPU thread 1!
+ hello world from GPU thread 2!
+ hello world from GPU thread 3!
+ hello world from GPU thread 4!
+ hello world from GPU thread 5!
+ hello world from GPU thread 6!
+ hello world from GPU thread 7!
+ hello world from GPU thread 8!
+ hello world from GPU thread 9!
+ 

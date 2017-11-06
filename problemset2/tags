@@ -1,0 +1,18 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+channelConvolution	reference_calc.cpp	/^void channelConvolution(const unsigned char* const channel,$/;"	f
+d_inputImageRGBA__	HW2_reference.cpp	/^uchar4 *d_inputImageRGBA__;$/;"	v
+d_outputImageRGBA__	HW2_reference.cpp	/^uchar4 *d_outputImageRGBA__;$/;"	v
+h_filter__	HW2_reference.cpp	/^float *h_filter__;$/;"	v
+imageInputRGBA	HW2_reference.cpp	/^cv::Mat imageInputRGBA;$/;"	v
+imageOutputRGBA	HW2_reference.cpp	/^cv::Mat imageOutputRGBA;$/;"	v
+main	main_reference.cpp	/^int main(int argc, char **argv) {$/;"	f
+numCols	HW2_reference.cpp	/^size_t numCols() { return imageInputRGBA.cols; }$/;"	f
+numRows	HW2_reference.cpp	/^size_t numRows() { return imageInputRGBA.rows; }$/;"	f
+postProcess	HW2_reference.cpp	/^void postProcess(const std::string& output_file) {$/;"	f
+preProcess	HW2_reference.cpp	/^void preProcess(uchar4 **h_inputImageRGBA, uchar4 **h_outputImageRGBA,$/;"	f
+referenceCalculation	reference_calc.cpp	/^void referenceCalculation(const uchar4* const rgbaImage, uchar4 *const outputImage,$/;"	f
