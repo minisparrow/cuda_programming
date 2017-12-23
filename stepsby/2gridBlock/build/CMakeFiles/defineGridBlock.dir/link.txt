@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/defineGridBlock.dir/defineGridBlock_generated_defineGridBlock.cu.o  -o defineGridBlock -rdynamic /usr/local/cuda/lib64/libcudart_static.a -lpthread -ldl -lrt 
