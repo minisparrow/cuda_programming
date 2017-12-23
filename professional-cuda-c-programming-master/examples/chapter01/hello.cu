@@ -6,9 +6,13 @@
  * World from GPU! from 10 CUDA threads running on the GPU.
  */
 
-__global__ void helloFromGPU()
+__global__ void helloFromGPU(int count)
 {
-    printf("Hello World from GPU!\n");
+    for (int i=blockIdx.x * blockDim.x + threadIdx.x; i < count; i += blockDim.x * gridDim.x  )
+    {
+    printf("gridDim.x,%d | blockDim.x %d | blockIdx.x %d | threadIdx.x %d\n",gridDim.x,blockDim.x,blockIdx.x,threadIdx.x);
+    printf("%d, Hello World from GPU!\n", i);
+    }
 }
 
 
@@ -17,7 +21,7 @@ int main(int argc, char **argv)
 {
     printf("Hello World from CPU!\n");
 
-    helloFromGPU<<<1, 10>>>();
+    helloFromGPU<<<5, 10>>>(50);
     
     CHECK(cudaDeviceReset());
     return 0;
