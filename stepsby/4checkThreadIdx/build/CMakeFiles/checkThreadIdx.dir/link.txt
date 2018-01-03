@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/checkThreadIdx.dir/checkThreadIdx_generated_checkThreadIndex.cu.o  -o checkThreadIdx -rdynamic /usr/local/cuda/lib64/libcudart_static.a -lpthread -ldl -lrt 

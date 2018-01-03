@@ -1,0 +1,51 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/mli/Documents/cuda_programming/stepsby/4checkThreadIdx/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3bbac/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3bbac.dir/build.make CMakeFiles/cmTC_3bbac.dir/build
+make[1]: Entering directory `/home/mli/Documents/cuda_programming/stepsby/4checkThreadIdx/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3bbac.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -fPIC    -o CMakeFiles/cmTC_3bbac.dir/CheckSymbolExists.c.o   -c /home/mli/Documents/cuda_programming/stepsby/4checkThreadIdx/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_3bbac
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3bbac.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC     CMakeFiles/cmTC_3bbac.dir/CheckSymbolExists.c.o  -o cmTC_3bbac -rdynamic 
+CMakeFiles/cmTC_3bbac.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTC_3bbac] Error 1
+make[1]: Leaving directory `/home/mli/Documents/cuda_programming/stepsby/4checkThreadIdx/build/CMakeFiles/CMakeTmp'
+make: *** [cmTC_3bbac/fast] Error 2
+
+File /home/mli/Documents/cuda_programming/stepsby/4checkThreadIdx/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/mli/Documents/cuda_programming/stepsby/4checkThreadIdx/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_868f7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_868f7.dir/build.make CMakeFiles/cmTC_868f7.dir/build
+make[1]: Entering directory `/home/mli/Documents/cuda_programming/stepsby/4checkThreadIdx/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_868f7.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_868f7.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.7/Modules/CheckFunctionExists.c
+Linking C executable cmTC_868f7
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_868f7.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_868f7.dir/CheckFunctionExists.c.o  -o cmTC_868f7 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTC_868f7] Error 1
+make[1]: Leaving directory `/home/mli/Documents/cuda_programming/stepsby/4checkThreadIdx/build/CMakeFiles/CMakeTmp'
+make: *** [cmTC_868f7/fast] Error 2
+
+
