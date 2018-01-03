@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/sumArraysOnGPU-timer.dir/sumArraysOnGPU-timer_generated_sumArraysOnGPU-timer.cu.o  -o sumArraysOnGPU-timer -rdynamic /usr/local/cuda/lib64/libcudart_static.a -lpthread -ldl -lrt 
