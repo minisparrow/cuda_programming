@@ -1,4 +1,4 @@
-4checkThreadIdx
+4_CheckThreadIdx
 ===============================
 
 通过这个程序掌握基本的cuda编程模型

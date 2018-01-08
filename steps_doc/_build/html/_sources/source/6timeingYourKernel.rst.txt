@@ -1,4 +1,4 @@
-6TimingYourKernel测试你的kernel性能
+6_TimingYourKernel测试你的kernel性能
 ===========================================
 - 1. 用sys/time.h的函数  
 

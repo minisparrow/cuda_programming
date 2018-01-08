@@ -36,7 +36,7 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="cuda 1.0 documentation" href="#"/>
-        <link rel="next" title="1helloword" href="source/1helloworld.html"/> 
+        <link rel="next" title="1_Helloword" href="source/1helloworld.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -90,12 +90,14 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="source/1helloworld.html">1helloword</a></li>
-<li class="toctree-l1"><a class="reference internal" href="source/2gridBlock.html">2gridBlock</a></li>
-<li class="toctree-l1"><a class="reference internal" href="source/3checkDimension.html">3checkDimension从Host,Device端访问维度</a></li>
-<li class="toctree-l1"><a class="reference internal" href="source/4checkThreadIdx.html">4checkThreadIdx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="source/5checkYourCudaResults.html">5checkYourCudaResults</a></li>
-<li class="toctree-l1"><a class="reference internal" href="source/6timeingYourKernel.html">6TimingYourKernel测试你的kernel性能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/1helloworld.html">1_Helloword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/2gridBlock.html">2_GridBlock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/3checkDimension.html">3_CheckDimension从Host,Device端访问维度</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/4checkThreadIdx.html">4_CheckThreadIdx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/5checkYourCudaResults.html">5_CheckYourCudaResults</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/6timeingYourKernel.html">6_TimingYourKernel测试你的kernel性能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/7ExecutModel_intro.html">7_理解基本的CUDA执行模型-CUDA Execution Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/8Warp.html">8_Understanding_the_nature_of_WARP</a></li>
 </ul>
 
             
@@ -164,22 +166,33 @@
 <p>Contents:</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="source/1helloworld.html">1helloword</a></li>
-<li class="toctree-l1"><a class="reference internal" href="source/2gridBlock.html">2gridBlock</a></li>
-<li class="toctree-l1"><a class="reference internal" href="source/3checkDimension.html">3checkDimension从Host,Device端访问维度</a></li>
-<li class="toctree-l1"><a class="reference internal" href="source/4checkThreadIdx.html">4checkThreadIdx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="source/5checkYourCudaResults.html">5checkYourCudaResults</a></li>
-<li class="toctree-l1"><a class="reference internal" href="source/6timeingYourKernel.html">6TimingYourKernel测试你的kernel性能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/1helloworld.html">1_Helloword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/2gridBlock.html">2_GridBlock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/3checkDimension.html">3_CheckDimension从Host,Device端访问维度</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/4checkThreadIdx.html">4_CheckThreadIdx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/5checkYourCudaResults.html">5_CheckYourCudaResults</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/6timeingYourKernel.html">6_TimingYourKernel测试你的kernel性能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/7ExecutModel_intro.html">7_理解基本的CUDA执行模型-CUDA Execution Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source/7ExecutModel_intro.html#gpu-architecuture-overview">GPU architecuture Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/7ExecutModel_intro.html#cuda-gpu-magic-number">CUDA GPU magic number</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/7ExecutModel_intro.html#threads">threads的并行与同步</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/7ExecutModel_intro.html#the-heart-of-the-gpu-architecture">THE Heart of THE GPU Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/7ExecutModel_intro.html#the-fermi-architecture">The Fermi Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/7ExecutModel_intro.html#the-kepler-architecture">The Kepler Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/7ExecutModel_intro.html#profile-driven-optimizaiton">Profile-Driven Optimizaiton性能驱动的优化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/7ExecutModel_intro.html#cuda">CUDA 提供了两种性能分析工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/7ExecutModel_intro.html#kernelprofile-driven-approach">你将学到如何写高效的kernel通过使用profile-driven approach</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/7ExecutModel_intro.html#id1">影响性能的可能的原因</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source/8Warp.html">8_Understanding_the_nature_of_WARP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source/8Warp.html#warp">warp数计算</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/8Warp.html#warp-divergence">warp Divergence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source/8Warp.html#id1">如何避免warp divergence</a></li>
+</ul>
+</li>
 </ul>
 </div>
-</div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
-</ul>
 </div>
 
 
@@ -192,7 +205,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="source/1helloworld.html" class="btn btn-neutral float-right" title="1helloword" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="source/1helloworld.html" class="btn btn-neutral float-right" title="1_Helloword" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>

@@ -1,4 +1,4 @@
-3checkDimension从Host,Device端访问维度
+3_CheckDimension从Host,Device端访问维度
 =========================================
 - 1. 如何从Host端访问grid和block
      

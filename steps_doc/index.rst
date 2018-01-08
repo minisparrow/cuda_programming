@@ -17,14 +17,9 @@ Contents:
    source/4checkThreadIdx.rst
    source/5checkYourCudaResults.rst
    source/6timeingYourKernel.rst
+   source/7ExecutModel_intro.rst
+   source/8Warp.rst
 
 
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 

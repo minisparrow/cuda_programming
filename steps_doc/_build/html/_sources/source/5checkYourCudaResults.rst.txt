@@ -1,4 +1,4 @@
-5checkYourCudaResults
+5_CheckYourCudaResults
 ==========================
 
 通过比较cpu结果与gpu结果来检查我们的gpu运算结果是否正确.

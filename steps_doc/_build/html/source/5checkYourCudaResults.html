@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5checkYourCudaResults &mdash; cuda 1.0 documentation</title>
+  <title>5_CheckYourCudaResults &mdash; cuda 1.0 documentation</title>
   
 
   
@@ -36,7 +36,8 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="cuda 1.0 documentation" href="../index.html"/>
-        <link rel="prev" title="4checkThreadIdx" href="4checkThreadIdx.html"/> 
+        <link rel="next" title="6_TimingYourKernel测试你的kernel性能" href="6timeingYourKernel.html"/>
+        <link rel="prev" title="4_CheckThreadIdx" href="4checkThreadIdx.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -90,11 +91,14 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="1helloworld.html">1helloword</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2gridBlock.html">2gridBlock</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3checkDimension.html">3checkDimension从Host,Device端访问维度</a></li>
-<li class="toctree-l1"><a class="reference internal" href="4checkThreadIdx.html">4checkThreadIdx</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5checkYourCudaResults</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1helloworld.html">1_Helloword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2gridBlock.html">2_GridBlock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3checkDimension.html">3_CheckDimension从Host,Device端访问维度</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4checkThreadIdx.html">4_CheckThreadIdx</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5_CheckYourCudaResults</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6timeingYourKernel.html">6_TimingYourKernel测试你的kernel性能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7ExecutModel_intro.html">7_理解基本的CUDA执行模型-CUDA Execution Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8Warp.html">8_Understanding_the_nature_of_WARP</a></li>
 </ul>
 
             
@@ -139,7 +143,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>5checkYourCudaResults</li>
+      <li>5_CheckYourCudaResults</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -159,7 +163,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="checkyourcudaresults">
-<h1>5checkYourCudaResults<a class="headerlink" href="#checkyourcudaresults" title="Permalink to this headline">¶</a></h1>
+<h1>5_CheckYourCudaResults<a class="headerlink" href="#checkyourcudaresults" title="Permalink to this headline">¶</a></h1>
 <p>通过比较cpu结果与gpu结果来检查我们的gpu运算结果是否正确.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#include &quot;../common/common.h&quot;</span>
 <span class="c1">#include &lt;cuda_runtime.h&gt;</span>
@@ -307,8 +311,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="6timeingYourKernel.html" class="btn btn-neutral float-right" title="6_TimingYourKernel测试你的kernel性能" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="4checkThreadIdx.html" class="btn btn-neutral" title="4checkThreadIdx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="4checkThreadIdx.html" class="btn btn-neutral" title="4_CheckThreadIdx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
