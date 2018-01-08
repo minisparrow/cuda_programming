@@ -11,8 +11,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.7.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.7.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.7.2/CMakeSystem.cmake"
-  "CMakeFiles/sumArraysOnGPU-timer.dir//sumArraysOnGPU-timer_generated_sumArraysOnGPU-timer.cu.o.cmake.pre-gen"
-  "CMakeFiles/sumArraysOnGPU-timer.dir/sumArraysOnGPU-timer_generated_sumArraysOnGPU-timer.cu.o.depend"
+  "CMakeFiles/simpleDivergence.dir/./simpleDivergence_generated_simpleDivergence.cu.o.cmake.pre-gen"
+  "CMakeFiles/simpleDivergence.dir/simpleDivergence_generated_simpleDivergence.cu.o.depend"
   "/usr/local/share/cmake-3.7/Modules/CMakeCInformation.cmake"
   "/usr/local/share/cmake-3.7/Modules/CMakeCXXInformation.cmake"
   "/usr/local/share/cmake-3.7/Modules/CMakeCommonLanguageInclude.cmake"
@@ -48,12 +48,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/sumArraysOnGPU-timer.dir/sumArraysOnGPU-timer_generated_sumArraysOnGPU-timer.cu.o.cmake.pre-gen"
-  "CMakeFiles/sumArraysOnGPU-timer.dir//sumArraysOnGPU-timer_generated_sumArraysOnGPU-timer.cu.o.cmake"
+  "CMakeFiles/simpleDivergence.dir/./simpleDivergence_generated_simpleDivergence.cu.o.cmake.pre-gen"
+  "CMakeFiles/simpleDivergence.dir/./simpleDivergence_generated_simpleDivergence.cu.o.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/sumArraysOnGPU-timer.dir/DependInfo.cmake"
+  "CMakeFiles/simpleDivergence.dir/DependInfo.cmake"
   )

@@ -1,0 +1,8 @@
+Device 0: GeForce GTX 1080
+Data size 16777216 Execution Configure (block 64 grid 262144)
+memcpy elapsed 0.000000 sec ----------------
+warmup      <<< 262144   64 >>> elapsed 0.000000 sec 
+mathKernel1 <<< 262144   64 >>> elapsed 0.000000 sec 
+mathKernel2 <<< 262144   64 >>> elapsed 0.000000 sec 
+mathKernel3 <<< 262144   64 >>> elapsed 0.000000 sec 
+mathKernel4 <<< 262144   64 >>> elapsed 0.000000 sec 

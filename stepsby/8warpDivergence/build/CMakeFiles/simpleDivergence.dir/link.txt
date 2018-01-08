@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/simpleDivergence.dir/simpleDivergence_generated_simpleDivergence.cu.o  -o simpleDivergence -rdynamic /usr/local/cuda/lib64/libcudart_static.a -lpthread -ldl -lrt 
