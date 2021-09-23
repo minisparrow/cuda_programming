@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 {
     printf("Hello World from CPU!\n");
 
-    helloFromGPU<<<5, 10>>>(50);
+    helloFromGPU<<<5, 2>>>(10);
     
     CHECK(cudaDeviceReset());
     return 0;
