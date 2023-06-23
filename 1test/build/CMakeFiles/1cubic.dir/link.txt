@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/1cubic.dir/1cubic_generated_1cubic.cu.o  -o 1cubic -rdynamic /usr/local/cuda/lib64/libcudart.so -Wl,-rpath,/usr/local/cuda/lib64 
